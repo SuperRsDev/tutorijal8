@@ -1,18 +1,25 @@
 package ba.unsa.etf.rs.tutorijal8;
 
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class PripremaTest {
 
     private TransportDAO dao;
+
+    @BeforeAll
+    static void vratiNaPocetak(){
+        TransportDAO dao = TransportDAO.getInstance();
+        dao.resetDatabase();
+    }
 
     @BeforeEach
     void setUp() {

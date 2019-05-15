@@ -3,60 +3,20 @@ package ba.unsa.etf.rs.tutorijal8;
 import java.time.LocalDate;
 
 public class Driver {
-    private String ime;
-    private String prezime;
+    private String name;
+    private String surename;
     private String jmbg;
-    private LocalDate datumRodjenja;
-    private LocalDate datumZaposlenja;
+    private LocalDate birthDay;
+    private LocalDate employeementDay;
 
     public Driver(String test, String testović, String s, LocalDate localDate, LocalDate now) {
-        ime = test;
-        prezime = testović;
+        name = test;
+        surename = testović;
         jmbg = s;
-        datumRodjenja = localDate;
-        datumZaposlenja = now;
+        birthDay = localDate;
+        employeementDay = now;
     }
 
-
-    public String getIme() {
-        return ime;
-    }
-
-    public void setIme(String ime) {
-        this.ime = ime;
-    }
-
-    public String getPrezime() {
-        return prezime;
-    }
-
-    public void setPrezime(String prezime) {
-        this.prezime = prezime;
-    }
-
-    public String getJmbg() {
-        return jmbg;
-    }
-
-    public void setJmbg(String jmbg) {
-        this.jmbg = jmbg;
-    }
-
-    public LocalDate getDatumRodjenja() {
-        return datumRodjenja;
-    }
-
-    public void setDatumRodjenja(LocalDate datumRodjenja) {
-        this.datumRodjenja = datumRodjenja;
-    }
-
-    public LocalDate getDatumZaposlenja() {
-        return datumZaposlenja;
-    }
-
-    public void setDatumZaposlenja(LocalDate datumZaposlenja) {
-        this.datumZaposlenja = datumZaposlenja;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -77,5 +37,45 @@ public class Driver {
 
         // Compare the data members and return accordingly
         return this.jmbg.equals(c.jmbg);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurename() {
+        return surename;
+    }
+
+    public void setSurename(String surename) {
+        this.surename = surename;
+    }
+
+    public String getJmbg() {
+        return jmbg;
+    }
+
+    public void setJmbg(String jmbg) {
+        this.jmbg = jmbg;
+    }
+
+    public LocalDate getBirthday() {
+        return birthDay;
+    }
+
+    public void setBirthday(LocalDate birthDay) {
+        this.birthDay = birthDay;
+    }
+
+    public LocalDate getEmployeementDay() {
+        return employeementDay;
+    }
+
+    public void setEmployeementDay(LocalDate employeementDay) {
+        this.employeementDay = employeementDay;
     }
 }

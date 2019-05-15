@@ -43,4 +43,22 @@ public class TransportDAO {
     public void deleteDriver(Driver driver) {
         drivers.remove(driver);
     }
+
+    public void dodijeliVozacuAutobus(Driver driver, Bus bus, int which) {
+        switch (which) {
+            case 0:
+                bus.setDriverOne(driver);
+                break;
+            case 1:
+                bus.setDriverTwo(driver);
+                break;
+        }
+        var index = this.buses.indexOf(bus);
+        this.buses.set(index, bus);
+    }
+
+    public void resetDatabase() {
+        this.buses = new ArrayList<>();
+        this.drivers = new ArrayList<>();
+    }
 }

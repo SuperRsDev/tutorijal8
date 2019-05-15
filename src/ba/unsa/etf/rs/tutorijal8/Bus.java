@@ -1,37 +1,57 @@
 package ba.unsa.etf.rs.tutorijal8;
 
+import java.util.ArrayList;
+
 public class Bus {
-    private String proizvodjac;
-    private String serija;
-    private int brojSjedista;
+    private String maker;
+    private String series;
+    private int seatNumber;
+    private ArrayList<Driver> drivers;
 
     public Bus(String man, String serija, int i) {
-        proizvodjac = man;
-        this.serija = serija;
-        brojSjedista = i;
+        maker = man;
+        series = serija;
+        seatNumber = i;
+        drivers = new ArrayList<>();
     }
 
-    public String getProizvodjac() {
-        return proizvodjac;
+    public String getMaker() {
+        return maker;
     }
 
-    public void setProizvodjac(String proizvodjac) {
-        this.proizvodjac = proizvodjac;
+    public void setMaker(String maker) {
+        this.maker = maker;
     }
 
-    public String getSerija() {
-        return serija;
+    public String getSeries() {
+        return series;
     }
 
-    public void setSerija(String serija) {
-        this.serija = serija;
+    public void setSeries(String series) {
+        this.series = series;
     }
 
-    public int getBrojSjedista() {
-        return brojSjedista;
+    public int getSeatNumber() {
+        return seatNumber;
     }
 
-    public void setBrojSjedista(int brojSjedista) {
-        this.brojSjedista = brojSjedista;
+    public void setSeatNumber(int seatNumber) {
+        this.seatNumber = seatNumber;
+    }
+
+    public void setDriverOne(Driver d) {
+        this.drivers.add(0, d);
+    }
+
+    public void setDriverTwo(Driver d) {
+        this.drivers.add(1, d);
+    }
+
+    public Driver getDriverOne() {
+        return drivers.get(0);
+    }
+
+    public Driver getDriverTwo() {
+        return drivers.get(1);
     }
 }
