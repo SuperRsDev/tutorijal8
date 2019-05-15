@@ -46,10 +46,10 @@ public class TransportDAO {
 
     public void dodijeliVozacuAutobus(Driver driver, Bus bus, int which) {
         switch (which) {
-            case 0:
+            case 1:
                 bus.setDriverOne(driver);
                 break;
-            case 1:
+            case 2:
                 bus.setDriverTwo(driver);
                 break;
         }

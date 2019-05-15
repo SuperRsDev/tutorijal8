@@ -78,4 +78,9 @@ public class Driver {
     public void setEmployeementDay(LocalDate employeementDay) {
         this.employeementDay = employeementDay;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s ( %s )", this.name, this.surename, this.jmbg);
+    }
 }

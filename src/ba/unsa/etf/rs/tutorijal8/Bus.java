@@ -6,13 +6,13 @@ public class Bus {
     private String maker;
     private String series;
     private int seatNumber;
-    private ArrayList<Driver> drivers;
+    private Driver driverOne;
+    private Driver driverTwo;
 
     public Bus(String man, String serija, int i) {
         maker = man;
         series = serija;
         seatNumber = i;
-        drivers = new ArrayList<>();
     }
 
     public String getMaker() {
@@ -40,18 +40,23 @@ public class Bus {
     }
 
     public void setDriverOne(Driver d) {
-        this.drivers.add(0, d);
+        this.driverOne = d;
     }
 
     public void setDriverTwo(Driver d) {
-        this.drivers.add(1, d);
+        this.driverTwo = d;
     }
 
     public Driver getDriverOne() {
-        return drivers.get(0);
+        return driverOne;
     }
 
     public Driver getDriverTwo() {
-        return drivers.get(1);
+        return driverTwo;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s ( seats: %s ) - (%s) - (%s)", this.maker, this.series, this.seatNumber, this.driverOne, this.driverTwo);
     }
 }
